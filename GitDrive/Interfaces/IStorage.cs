@@ -1,4 +1,4 @@
-﻿namespace GitDrive;
+﻿namespace GitDrive.Interfaces;
 
 internal interface IStorage
 {
