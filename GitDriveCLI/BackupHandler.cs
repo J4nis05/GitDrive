@@ -15,17 +15,15 @@ public class BackupHandler
                 .PageSize(10)
                 .HighlightStyle(highlightStyle)
                 .AddChoices(new[] {
-                    "[MediumPurple1]Create New Backup[/]",
                     "[MediumPurple1]Load Backup[/]",
-                    "[MediumPurple1]Delete Backup[/]"
+                    "[MediumPurple1]Delete Backup[/]",
+                    "[MediumPurple1]View Backups[/]"
                     
                 }));
 
         switch (choices)
         {
-            case "[MediumPurple1]Create New Backup[/]":
-                this.CreateNewBackup();
-                break;
+            
             
             case  "[MediumPurple1]Load Backup[/]":
                 this.LoadBackup();
@@ -33,6 +31,10 @@ public class BackupHandler
             
             case "[MediumPurple1]Delete Backup[/]":
                 this.DeleteBackup();
+                break;
+            
+            case "[MediumPurple1]View Backups[/]":
+                this.ViewBackup();
                 break;
         }
     }
@@ -53,5 +55,10 @@ public class BackupHandler
         string FilePath = AnsiConsole.Ask<string>("[MediumPurple1]Please Input a File Path[/]?");
         AnsiConsole.MarkupLine("not implementet");
     }
-    
+
+    public void ViewBackup()
+    {
+        string FilePath = AnsiConsole.Ask<string>("[MediumPurple1]Please Input a File Path[/]?");
+        AnsiConsole.MarkupLine("not implementet");
+    }
 }
