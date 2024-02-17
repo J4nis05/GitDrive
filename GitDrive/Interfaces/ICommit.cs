@@ -8,15 +8,15 @@ public interface ICommit
     /// <summary>
     /// The message of the commit
     /// </summary>
-    public string Message { init; get; }
+    public string Message { get; internal init; }
     
     /// <summary>
     /// The git commit hash.
     /// </summary>
-    public string Hash { init; get; }
+    public string Hash { get; internal init; }
     
     /// <summary>
     /// The Time the commit was made.
     /// </summary>
-    public DateTime TimeStamp { init; get; }
+    public DateTime TimeStamp { get; internal init; }
 }
