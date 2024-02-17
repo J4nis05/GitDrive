@@ -6,9 +6,9 @@
 public interface IDrive
 {
     /// <summary>
-    /// Creates a commit.
+    /// Create a commit.
     /// </summary>
-    public void MakeBackup();
+    public void MakeBackup(string message);
     
     /// <summary>
     /// Get all commits in the repository
