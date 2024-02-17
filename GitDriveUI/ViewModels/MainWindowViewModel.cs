@@ -1,8 +1,29 @@
-﻿namespace GitDriveUI.ViewModels;
+﻿using System;
+
+namespace GitDriveUI.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
-{
-#pragma warning disable CA1822 // Mark members as static
-    public string Greeting => "Welcome to Avalonia!";
-#pragma warning restore CA1822 // Mark members as static
+{ 
+    private string _greeting = "GitDriveUI is made with Avalonia! UwU";
+    private string _username = "Fahrwerk";
+    
+    public string Greeting
+    {
+        get
+        {
+            return _greeting;
+        }
+        set
+        {
+            _greeting = value;
+        }
+    }
+
+    public string Username
+    {
+        get
+        {
+            return _username;
+        }
+    }
 }
