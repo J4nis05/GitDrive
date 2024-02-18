@@ -132,8 +132,32 @@
                         CornerRadius="10"
                         Background="#ff87af"
                         IsVisible="False"
-                        Name="BrdMainSubBorder">
-                <TextBlock>Test</TextBlock>
+                        Name="BrdFolderSelectSubBorder">
+                    <Grid Margin="5"
+                          ColumnDefinitions="*, *, *, *, *"
+                          RowDefinitions="Auto, Auto"
+                          VerticalAlignment="Top"
+                          Name="GrdFolderSelectGrid">
+                        
+                    </Grid>
+                </Border>
+                
+                <Border Grid.Column="0" 
+                        Grid.Row="1" 
+                        Grid.ColumnSpan="2"
+                        Grid.RowSpan="6"
+                        Margin="5"
+                        CornerRadius="10"
+                        Background="#ff87af"
+                        IsVisible="False"
+                        Name="BrdManageBackupsSubBorder">
+                    <Grid Margin="5"
+                          ColumnDefinitions="*, *, *, *, *"
+                          RowDefinitions="Auto, Auto"
+                          VerticalAlignment="Top"
+                          Name="GrdManageBackupsGrid">
+                        
+                    </Grid>
                 </Border>
             </Grid>
         </Border>
