@@ -123,11 +123,12 @@
                     Manage Backups
                 </Button>
                 
-                <!-- Submenu Background -->
+                <!-- Select Folder Submenu -->
                 <Border Grid.Column="0" 
                         Grid.Row="1" 
                         Grid.ColumnSpan="2"
                         Grid.RowSpan="6"
+                        Height="305"
                         Margin="5"
                         CornerRadius="10"
                         Background="#ff87af"
@@ -138,14 +139,16 @@
                           RowDefinitions="Auto, Auto"
                           VerticalAlignment="Top"
                           Name="GrdFolderSelectGrid">
-                        
+                        <TextBlock>Test SF</TextBlock>
                     </Grid>
                 </Border>
                 
+                <!-- Manage Backups Submenu -->
                 <Border Grid.Column="0" 
                         Grid.Row="1" 
                         Grid.ColumnSpan="2"
                         Grid.RowSpan="6"
+                        Height="305"
                         Margin="5"
                         CornerRadius="10"
                         Background="#ff87af"
@@ -156,7 +159,7 @@
                           RowDefinitions="Auto, Auto"
                           VerticalAlignment="Top"
                           Name="GrdManageBackupsGrid">
-                        
+                        <TextBlock>Test MB</TextBlock>
                     </Grid>
                 </Border>
             </Grid>
