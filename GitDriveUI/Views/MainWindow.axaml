@@ -74,7 +74,7 @@
                 <Button Grid.Row="0" 
                         Grid.Column="3"
                         Grid.ColumnSpan="3"
-                        Click="ManageAccount"
+                        Click="BtnMangeAccount_OnClick"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center"
                         FontSize="14"
@@ -107,7 +107,9 @@
                         HorizontalAlignment="Stretch"
                         FontSize="16"
                         FontWeight="Bold"
-                        HorizontalContentAlignment="Center">
+                        HorizontalContentAlignment="Center"
+                        Name="BtnSelectFolder"
+                        Click="BtnSelectFolder_OnClick">
                     Select Folder
                 </Button>
                 
@@ -119,7 +121,9 @@
                         HorizontalAlignment="Stretch"
                         FontSize="16"
                         FontWeight="Bold"
-                        HorizontalContentAlignment="Center">
+                        HorizontalContentAlignment="Center"
+                        Name="BtnManageBackups"
+                        Click="BtnManageBackups_OnClick">
                     Manage Backups
                 </Button>
                 

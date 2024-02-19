@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using ReactiveUI;
 
 namespace GitDriveUI.ViewModels;
 
@@ -7,6 +8,8 @@ public class MainWindowViewModel : ViewModelBase
 { 
     private string _greeting = "GitDriveUI\u2122 is made with Avalonia! UwU\u2122";
     private string _username = "Fahrwerk";
+    private bool _showSelectFolder;
+    private bool _showManageBackups;
     
     public string Greeting
     {
@@ -20,21 +23,32 @@ public class MainWindowViewModel : ViewModelBase
         set { _username = value; }
     }
     
-    
-    private bool _isVisible;
-    public bool IsVisible
+    public bool ShowSelectFolder
     {
-        get { return _isVisible; }
-        set
-        {
-            _isVisible = value;
-            OnPropertyChanged();
-        }
+        get => _showSelectFolder;
+        set => this.RaiseAndSetIfChanged(ref _showSelectFolder, value);
     }
-
-    public ICommand ToggleVisibilityCommand => new RelayCommand(ToggleVisibility);
-    private void ToggleVisibility()
+    
+    public bool ShowManageBackups
     {
-        IsVisible = !IsVisible;
+        get => _showManageBackups;
+        set => this.RaiseAndSetIfChanged(ref _showManageBackups, value);
     }
 }
+
+    // private bool _isVisible;
+    // public bool IsVisible
+    // {
+    //     get { return _isVisible; }
+    //     set
+    //     {
+    //         _isVisible = value;
+    //         OnPropertyChanged();
+    //     }
+    // }
+    //
+    // public ICommand ToggleVisibilityCommand => new RelayCommand(ToggleVisibility);
+    // private void ToggleVisibility()
+    // {
+    //     IsVisible = !IsVisible;
+    // }
