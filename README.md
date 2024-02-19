@@ -33,6 +33,3 @@ Colour Palette based off of [spectreconsole.net](https://spectreconsole.net/appe
 | Other4        | yellow3_1       | 184 | #d7d700 |
 | Other5        | pink3           | 175 | #d787af |
 | Other6        | mediumturquoise | 80  | #5fd7d7 |
-
-
-

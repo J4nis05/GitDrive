@@ -1,3 +1,4 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using System.Diagnostics;
@@ -11,24 +12,44 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
-    
-    public void ManageAccount()
-    {
-        
-    }
 
     private void BtnMangeAccount_OnClick(object? sender, RoutedEventArgs e)
     {
-        Debug.Print("Hello");
+        BrdMainBorder.IsVisible = !BrdMainBorder.IsVisible;
     }
     
     private void BtnSelectFolder_OnClick(object? sender, RoutedEventArgs e)
     {
-        BrdFolderSelectSubBorder.IsVisible = true;
+        if (BrdManageBackupsSubBorder.IsVisible)
+        {
+            BrdManageBackupsSubBorder.IsVisible = false;
+        }
+        
+        BrdFolderSelectSubBorder.IsVisible = !BrdFolderSelectSubBorder.IsVisible;
     }
     
     private void BtnManageBackups_OnClick(object? sender, RoutedEventArgs e)
     {
-        BrdManageBackupsSubBorder.IsVisible.Equals(true);
+        if (BrdFolderSelectSubBorder.IsVisible)
+        {
+            BrdFolderSelectSubBorder.IsVisible = false;
+        }
+        
+        BrdManageBackupsSubBorder.IsVisible = !BrdManageBackupsSubBorder.IsVisible;
+    }
+
+    private void BtnLogOut_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Console.Out.Write("Hello");
+    }
+
+    private void BtnChangeAccount_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Console.Out.Write("Hello");
+    }
+
+    private void BtnPurgeAccount_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Console.Out.Write("Hello");
     }
 }

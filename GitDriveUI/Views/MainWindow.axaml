@@ -9,7 +9,8 @@
         Width="444"
         Height="566"
         Icon="/Assets/avalonia-logo.ico"
-        Title="GitDriveUI">
+        Title="GitDriveUI"
+        CanResize="False">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -99,7 +100,7 @@
                   VerticalAlignment="Top"
                   Name="GrdMainGrid">
 
-                <!-- Folder Selection -->
+                <!-- Button "Folder Selection" -->
                 <Button Grid.Column="0" 
                         Grid.Row="0"
                         Padding="15 10"
@@ -108,12 +109,13 @@
                         FontSize="16"
                         FontWeight="Bold"
                         HorizontalContentAlignment="Center"
+                        IsVisible="True"
                         Name="BtnSelectFolder"
                         Click="BtnSelectFolder_OnClick">
                     Select Folder
                 </Button>
                 
-                <!-- Backup Management -->
+                <!-- Button "Backup Management" -->
                 <Button Grid.Column="1" 
                         Grid.Row="0"
                         Padding="15 10"
@@ -122,6 +124,7 @@
                         FontSize="16"
                         FontWeight="Bold"
                         HorizontalContentAlignment="Center"
+                        IsVisible="True"
                         Name="BtnManageBackups"
                         Click="BtnManageBackups_OnClick">
                     Manage Backups
@@ -166,6 +169,64 @@
                         <TextBlock>Test MB</TextBlock>
                     </Grid>
                 </Border>
+                
+                <!-- Account Management Menu -->
+                <!-- Button "Log Out" -->
+                <Button Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Click="BtnLogOut_OnClick"
+                        Name="BtnLogOut"
+                        IsVisible="False"
+                        HorizontalAlignment="Center"
+                        Background="Black"
+                        Margin="0 15 0 5"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Width="250">
+                    <TextBlock Text="Log Out" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center"
+                               Name="TxtLogOutButton" />
+                </Button>
+                
+                <!-- Button "Change Account" -->
+                <Button Grid.Row="3"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Click="BtnChangeAccount_OnClick"
+                        Name="BtnChangeAccount"
+                        IsVisible="False"
+                        HorizontalAlignment="Center"
+                        Background="Black"
+                        Margin="0 5 0 5"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Width="250">
+                    <TextBlock Text="Change Account" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center"
+                               Name="TxtChangeAccountButton" />
+                </Button>
+                
+                <!-- Button "Remove Account & Data" -->
+                <Button Grid.Row="4"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Click="BtnPurgeAccount_OnClick"
+                        Name="BtnPurgeAccount"
+                        IsVisible="False"
+                        HorizontalAlignment="Center"
+                        Background="Black"
+                        Margin="0 5 0 5"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Width="250">
+                    <TextBlock Text="Remove Account & Data"
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center"
+                               Name="TxtPurgeAccountButton" />
+                </Button>
             </Grid>
         </Border>
         
