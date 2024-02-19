@@ -15,4 +15,9 @@ public partial class MainWindow : Window
     {
         Debug.WriteLine("Click!");
     }
+
+    public void SelectFolder()
+    {
+        
+    }
 }
