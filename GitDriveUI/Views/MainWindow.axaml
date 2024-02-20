@@ -222,7 +222,7 @@
                         FontSize="14"
                         FontWeight="Bold"
                         Width="250">
-                    <TextBlock Text="Remove Account & Data"
+                    <TextBlock Text="Remove Account &amp; Data"
                                VerticalAlignment="Center" 
                                HorizontalAlignment="Center"
                                Name="TxtPurgeAccountButton" />
