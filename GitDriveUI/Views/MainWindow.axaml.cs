@@ -54,3 +54,37 @@ public partial class MainWindow : Window
         Console.Out.Write("Hello");
     }
 }
+
+// Elements:
+// 
+// 
+// StackPanel: Structure Root           MainStack
+// 
+// Border: Top Title Bar                BrdTitleBarBorder
+// TextBlock: Top Title Bar             TxtTileBarText
+// 
+// Border: Account Bar                  BrdAccountBarBorder
+// Grid: Account Bar                    GrdAccountBarGrid
+// Border: Profile Picture              BrdAccountBarPictureBorder
+// Image: Profile Picture               ImgAccountBarPicture
+// TextBlock: Username                  TxtAccountBarUsername
+// Button: Manage Account               BtnAccountBarManageAccount
+// 
+// Border: Main Section                 BrdMainBorder
+// Grid: Main Section                   GrdMainGrid
+// Button: Select Folder                BtnSelectFolder
+// Button: Manage Backups               BtnManageBackups
+// 
+// Border: (Sub) Select Folder          BrdFolderSelectSubBorder
+// Grid: (Sub) Select Folder            GrdFolderSelectGrid
+// Border: (Sub) Manage Backups         BrdManageBackupsSubBorder
+// Grid: (Sub) Manage Backups           GrdManageBackupsGrid
+// 
+// Button: Log Out                      BtnLogOut
+// TextBlock: Log Out Button            TxtLogOutButton
+// Button: Change Account               BtnChangeAccount
+// TextBlock: Change Account Button     TxtChangeAccountButton
+// Button: Purge Account                BtnPurgeAccount
+// TextBlock: Purge Account Button      TxtPurgeAccountButton
+// 
+// TextBlock: Bottom Text               BottomText
