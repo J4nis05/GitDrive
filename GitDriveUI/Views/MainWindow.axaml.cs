@@ -1,8 +1,6 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
-using System.Diagnostics;
 using GitDriveUI.ViewModels;
 
 namespace GitDriveUI.Views;
@@ -12,11 +10,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-    }
-
-    private void BtnMangeAccount_OnClick(object? sender, RoutedEventArgs e)
-    {
-        BrdMainBorder.IsVisible = !BrdMainBorder.IsVisible;
+        DataContext = new MainWindowViewModel();
     }
     
     private void BtnSelectFolder_OnClick(object? sender, RoutedEventArgs e)
@@ -38,22 +32,30 @@ public partial class MainWindow : Window
         
         BrdManageBackupsSubBorder.IsVisible = !BrdManageBackupsSubBorder.IsVisible;
     }
-
+    
+    private void BtnMangeAccount_OnClick(object? sender, RoutedEventArgs e)
+    {
+        BrdMainBorder.IsVisible = !BrdMainBorder.IsVisible;
+        BrdMangeAccountBorder.IsVisible = !BrdMangeAccountBorder.IsVisible;
+    }
+    
     private void BtnLogOut_OnClick(object? sender, RoutedEventArgs e)
     {
-        Console.Out.Write("Hello");
+        Console.Out.Write("Logging Out... \n");
     }
 
     private void BtnChangeAccount_OnClick(object? sender, RoutedEventArgs e)
     {
-        Console.Out.Write("Hello");
+        Console.Out.Write("Changing Account... \n");
     }
 
     private void BtnPurgeAccount_OnClick(object? sender, RoutedEventArgs e)
     {
-        Console.Out.Write("Hello");
+        Console.Out.Write("Purging Account Information and Data... \n");
     }
 }
+
+
 
 // Elements:
 // 
@@ -80,6 +82,7 @@ public partial class MainWindow : Window
 // Border: (Sub) Manage Backups         BrdManageBackupsSubBorder
 // Grid: (Sub) Manage Backups           GrdManageBackupsGrid
 // 
+// Border: Account Management Border    BrdMangeAccountBorder
 // Button: Log Out                      BtnLogOut
 // TextBlock: Log Out Button            TxtLogOutButton
 // Button: Change Account               BtnChangeAccount

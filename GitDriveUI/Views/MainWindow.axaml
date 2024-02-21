@@ -169,15 +169,27 @@
                         <TextBlock>Test MB</TextBlock>
                     </Grid>
                 </Border>
-                
-                <!-- Account Management Menu -->
+            </Grid>
+        </Border>
+        
+        <!-- Manage Account Section -->
+        <Border Margin="10 5"
+                CornerRadius="10"
+                Background="#87afff"
+                Height="375"
+                IsVisible="False"
+                Name="BrdMangeAccountBorder">
+            <Grid ShowGridLines="False" Margin="5" 
+                  ColumnDefinitions="*, *" 
+                  RowDefinitions="*, *, *, *, *, *, *"
+                  VerticalAlignment="Top"
+                  Name="GrdManageAccountGrid">
                 <!-- Button "Log Out" -->
                 <Button Grid.Row="2"
                         Grid.Column="0"
                         Grid.ColumnSpan="2"
                         Click="BtnLogOut_OnClick"
                         Name="BtnLogOut"
-                        IsVisible="False"
                         HorizontalAlignment="Center"
                         Background="Black"
                         Margin="0 15 0 5"
@@ -196,7 +208,6 @@
                         Grid.ColumnSpan="2"
                         Click="BtnChangeAccount_OnClick"
                         Name="BtnChangeAccount"
-                        IsVisible="False"
                         HorizontalAlignment="Center"
                         Background="Black"
                         Margin="0 5 0 5"
@@ -215,7 +226,6 @@
                         Grid.ColumnSpan="2"
                         Click="BtnPurgeAccount_OnClick"
                         Name="BtnPurgeAccount"
-                        IsVisible="False"
                         HorizontalAlignment="Center"
                         Background="Black"
                         Margin="0 5 0 5"
